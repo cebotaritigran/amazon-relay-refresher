@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Tigran's clunky extension",
-    "description": "add a custom background to google.com",
+    "name": "Tigran's and Ercan's clunky extension",
+    "description": "extension for amazon relay",
     "version": "0.1",
     "icons": {
         "16": "./icons/icon16.png",
@@ -14,7 +14,15 @@
                 "https://relay.amazon.com/loadboard/search"
             ],
             "js": [
-                "click.js"
+                "./src/click.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://relay.amazon.com/loadboard/search"
+            ],
+            "js": [
+                "./src/loads.js"
             ]
         }
     ]
