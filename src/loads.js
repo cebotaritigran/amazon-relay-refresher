@@ -6,3 +6,9 @@ getAllLoadsButton.innerText = 'Get all loads';
 getAllLoadsButton.addEventListener("click", () => {
     console.log(document.querySelectorAll('.css-ly5121 .css-5wftrk'));
 })
+
+function getLoads() {
+    let loads = document.querySelectorAll('.css-ly5121 .css-5wftrk')
+    return loads;
+}
+

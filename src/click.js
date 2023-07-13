@@ -41,10 +41,14 @@ const setRandomInterval = (intervalFunction, minDelay, maxDelay) => {
 
 
 //clicks the refresh button on the bottom of the page
-function refresh() {
+async function refresh() {
     if (document.querySelector('.css-10ebv51') !== null) {
         but = document.querySelector(".css-10ebv51");
         but.click();
+        //just to see if it prints everytime loads
+        console.log(getLoads());
+        await console.log(document.querySelectorAll('.css-ly5121 .css-5wftrk'))
+        // it doesnt lol
         console.log("clicked")
     }
 }
