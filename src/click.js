@@ -41,17 +41,23 @@ const setRandomInterval = (intervalFunction, minDelay, maxDelay) => {
 
 
 //clicks the refresh button on the bottom of the page
-async function refresh() {
+function refresh() {
     if (document.querySelector('.css-10ebv51') !== null) {
         but = document.querySelector(".css-10ebv51");
         but.click();
         //just to see if it prints everytime loads
         console.log(getLoads());
-        await console.log(document.querySelectorAll('.css-ly5121 .css-5wftrk'))
         // it doesnt lol
         console.log("clicked")
     }
+    setTimeout(() => {
+        let loads = document.querySelectorAll('.css-ly5121 .css-5wftrk')
+        console.log(loads);
+    }, 1000);
+
 }
+
+
 
 
 
@@ -72,9 +78,9 @@ turnOnOffButton.addEventListener("click", () => {
     if (getAttributeElement == "off") {
         turnOnOffButton.setAttribute("value", "on");
         turnOnOffButton.innerText = 'OFF';
-
         console.log(maxvalue)
         interval = setRandomInterval(() => refresh(), 1000, maxvalue);
+
     } else {
         turnOnOffButton.setAttribute("value", "off");
         turnOnOffButton.innerText = 'ON';

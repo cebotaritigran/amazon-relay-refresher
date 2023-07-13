@@ -8,7 +8,7 @@ getAllLoadsButton.addEventListener("click", () => {
 })
 
 function getLoads() {
-    let loads = document.querySelectorAll('.css-ly5121 .css-5wftrk')
-    return loads;
+
 }
+
 
