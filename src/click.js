@@ -50,11 +50,11 @@ function refresh() {
         // it doesnt lol
         console.log("clicked")
     }
+    // the only way to get loads for now, need to fix this horrible abomination
     setTimeout(() => {
         let loads = document.querySelectorAll('.css-ly5121 .css-5wftrk')
         console.log(loads);
     }, 1000);
-
 }
 
 
@@ -87,8 +87,3 @@ turnOnOffButton.addEventListener("click", () => {
         interval.clear();
     }
 })
-
-
-
-
-
