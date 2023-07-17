@@ -8,6 +8,20 @@
         "48": "./icons/icon48.png",
         "128": "./icons/icon128.png"
     },
+    "permissions": [
+        "activeTab",
+        "webRequest",
+        "tabs",
+        "storage",
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "https://relay.amazon.com/*"
+    ],
+    "background": {
+        "service_worker": "service_worker.js",
+        "type": "module"
+    },
     "content_scripts": [
         {
             "matches": [

@@ -1,5 +1,5 @@
 
-function workOpportunityFromJson(json) {
+ function workOpportunityFromJson(json) {
     var workOpportunity = new WorkOpportunity(
         json['id'],
         json['version'],
