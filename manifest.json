@@ -19,7 +19,7 @@
         "https://relay.amazon.com/*"
     ],
     "background": {
-        "service_worker": "service_worker.js",
+        "service_worker": "./src/serviceWorker/service_worker.js",
         "type": "module"
     },
     "content_scripts": [
@@ -28,7 +28,7 @@
                 "https://relay.amazon.com/loadboard/search"
             ],
             "js": [
-                "./src/click.js"
+                "./src/refresh/click.js"
             ]
         },
         {
@@ -36,7 +36,12 @@
                 "https://relay.amazon.com/loadboard/search"
             ],
             "js": [
-                "./src/loads.js"
+                "./src/getLoads/loads.js",
+                "./src/main/main.js",
+                "./src/models/work_opportunity_model.js",
+                "./src/models/load_model.js",
+                "./src/models/stop_model.js",
+                "./src/models/location_model.js"
             ]
         }
     ]

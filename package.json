@@ -1,7 +1,7 @@
 {
   "name": "amazon-relay-refresher",
+  "version": "1.0.0",
   "type": "module",
-  "version": "0.0.1",
   "description": "first steps to build something working",
   "main": "index.js",
   "scripts": {

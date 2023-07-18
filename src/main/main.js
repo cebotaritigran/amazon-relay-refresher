@@ -1,122 +1,122 @@
 
- function workOpportunityFromJson(json) {
-    var workOpportunity = new WorkOpportunity(
-        json['id'],
-        json['version'],
-        json['entityType'],
-        json['operatorIds'],
-        json['startTime'],
-        json['endTime'],
-        json['expirationTime'],
-        json['expectedArrivalForNextStop'],
-        json['stopCount'],
-        json['isRetendered'],
-        json['isUnaccepted'],
-        json['businessType'],
-        json['contractId'],
-        json['payout'],
-        json['transitOperatorType'],
-        json['totalDuration'],
-        json['tourState'],
-        json['firstPickupTime'],
-        json['lastDeliveryTime'],
-        json['totalDistance'],
-        json['loads'],
-        json['aggregatedCostItems'],
-        json['workType'],
-        json['workOpportunityOptionId'],
-        json['workOpportunityType'],
-        json['deadhead'],
-        json['createdAtTime'],
-        json['endPriorityTime'],
-        json['relevanceScore'],
-        json['carrierSpecificShipperAccounts'],
-        json['startLocation'],
-        json['endLocation'],
-        json['powerType'],
-        json['shouldShowPriorityBadge'],
-        json['workOpportunityArrivalWindows'],
-        json['matchDeviationDetails'],
-        json['eligibleFeatures'],
-        json['carrierIneligibleForWOReasonList'],
-        json['carrierIneligibleForWOContextMap'],
-        json['oneDayPaymentEligible'],
-        json['laportLoad'],
-        json['chassisDepotLoad'],
-        json['adHocLoad']
-    );
+function workOpportunityFromJson(json) {
+	var workOpportunity = new WorkOpportunity(
+		json['id'],
+		json['version'],
+		json['entityType'],
+		json['operatorIds'],
+		json['startTime'],
+		json['endTime'],
+		json['expirationTime'],
+		json['expectedArrivalForNextStop'],
+		json['stopCount'],
+		json['isRetendered'],
+		json['isUnaccepted'],
+		json['businessType'],
+		json['contractId'],
+		json['payout'],
+		json['transitOperatorType'],
+		json['totalDuration'],
+		json['tourState'],
+		json['firstPickupTime'],
+		json['lastDeliveryTime'],
+		json['totalDistance'],
+		json['loads'],
+		json['aggregatedCostItems'],
+		json['workType'],
+		json['workOpportunityOptionId'],
+		json['workOpportunityType'],
+		json['deadhead'],
+		json['createdAtTime'],
+		json['endPriorityTime'],
+		json['relevanceScore'],
+		json['carrierSpecificShipperAccounts'],
+		json['startLocation'],
+		json['endLocation'],
+		json['powerType'],
+		json['shouldShowPriorityBadge'],
+		json['workOpportunityArrivalWindows'],
+		json['matchDeviationDetails'],
+		json['eligibleFeatures'],
+		json['carrierIneligibleForWOReasonList'],
+		json['carrierIneligibleForWOContextMap'],
+		json['oneDayPaymentEligible'],
+		json['laportLoad'],
+		json['chassisDepotLoad'],
+		json['adHocLoad']
+	);
 
-    return workOpportunity;
+	return workOpportunity;
 }
 
 function loadFromJson(json) {
-    var load = new Load(
-        json['versionedLoadId'],
-        json['stops'],
-        json['loadType'],
-        json['equipmentType'],
-        json['weight'],
-        json['distance'],
-        json['payout'],
-        json['costItems'],
-        json['specialServices'],
-        json['loadShipperAccounts'],
-        json['shipperReferenceNumbers'],
-        json['purchaseOrders'],
-        json['isExternalLoad'],
-        json['workOpportunityId'],
-        json['loadfreightType'],
-        json['aggregatedFreightAttributes'],
-        json['woLoadCarrierSpecificShipperAccounts']
-    );
+	var load = new Load(
+		json['versionedLoadId'],
+		json['stops'],
+		json['loadType'],
+		json['equipmentType'],
+		json['weight'],
+		json['distance'],
+		json['payout'],
+		json['costItems'],
+		json['specialServices'],
+		json['loadShipperAccounts'],
+		json['shipperReferenceNumbers'],
+		json['purchaseOrders'],
+		json['isExternalLoad'],
+		json['workOpportunityId'],
+		json['loadfreightType'],
+		json['aggregatedFreightAttributes'],
+		json['woLoadCarrierSpecificShipperAccounts']
+	);
 
-    return load;
+	return load;
 }
 
 function stopFromJson(json) {
-    var stop = new Stop(
-        json['stopId'],
-        json['stopType'],
-        json['stopSequenceNumber'],
-        json['location'],
-        json['locationCode'],
-        json['weight'],
-        json['actions'],
-        json['trailerDetails'],
-        json['loadingType'],
-        json['unloadingType'],
-        json['pickupInstructions'],
-        json['deliveryInstructions'],
-        json['pickupNumbers'],
-        json['deliveryNumbers'],
-        json['contacts'],
-        json['stopRequirements'],
-        json['isVendorLocation'],
-        json['dropTrailerTime'],
-        json['calculatedEstimateArrivalTime']
-    );
+	var stop = new Stop(
+		json['stopId'],
+		json['stopType'],
+		json['stopSequenceNumber'],
+		json['location'],
+		json['locationCode'],
+		json['weight'],
+		json['actions'],
+		json['trailerDetails'],
+		json['loadingType'],
+		json['unloadingType'],
+		json['pickupInstructions'],
+		json['deliveryInstructions'],
+		json['pickupNumbers'],
+		json['deliveryNumbers'],
+		json['contacts'],
+		json['stopRequirements'],
+		json['isVendorLocation'],
+		json['dropTrailerTime'],
+		json['calculatedEstimateArrivalTime']
+	);
 
-    return stop;
+	return stop;
 }
 
 function locationFromJson(json) {
-    var location = new Location(
-        json['label'],
-        json['stopCode'],
-        json['line1'],
-        json['line2'],
-        json['line3'],
-        json['city'],
-        json['state'],
-        json['country'],
-        json['postalCode'],
-        json['latitude'],
-        json['longitude'],
-        json['timeZone'],
-        json['vendorCodes']
-    );
+	var location = new Location(
+		json['label'],
+		json['stopCode'],
+		json['line1'],
+		json['line2'],
+		json['line3'],
+		json['city'],
+		json['state'],
+		json['country'],
+		json['postalCode'],
+		json['latitude'],
+		json['longitude'],
+		json['timeZone'],
+		json['vendorCodes']
+	);
 
-    return location;
+	return location;
 }
 
 const jsonString = `{
