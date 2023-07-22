@@ -13,6 +13,7 @@
         "webRequest",
         "tabs",
         "storage",
+        "scripting",
         "declarativeNetRequest"
     ],
     "host_permissions": [
@@ -21,6 +22,11 @@
     "background": {
         "service_worker": "./src/serviceWorker/service_worker.js",
         "type": "module"
+    },
+    "externally_connectable": {
+        "matches": [
+            "*://*.relay.amazon.com/*"
+        ]
     },
     "content_scripts": [
         {
@@ -43,7 +49,7 @@
                 "./src/models/stop_model.js",
                 "./src/models/location_model.js",
                 "./src/refresh/click.js",
-                "./src/serviceWorker/service_worker.js"
+                "./src/getToken/getToken.js"
             ]
         }
     ]

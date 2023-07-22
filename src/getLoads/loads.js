@@ -16,7 +16,7 @@ async function getLoads() {
             credentials: "same-origin",
             headers: {
                 'Content-type': 'application/json',
-                "X-CSRF-Token": token,
+                "X-CSRF-Token": 'g1E+w8CDMJBDQgVn1ciHs9kqzjmeCu3nXQeg3nNY7d6cAAAAAgAAAABkurAwcmF3AAAAAIIXF/5ED9rqj+J7i/USjw==',
                 //'Cookie': 'sess-id-owpus=131-7803448-8091924; sess-time-owpus=2082787201l; ubid-owpus=134-5147837-6075628; session-id=142-8586591-8533917; session-id-time=2320328630l; session-token=p3Wt5SIrsV+geO4DFf9rG5WMUltXrDe0uXyLZV/pQNfEKNaSUyLUpRcLnhfqB9+phppsIridRf42lJr7VLViDZxUZFEFFN5c4FWMryIQf/n1IdqjVcK6nT+w5wrTBm67u3EOLKm6v8G6x1nZpBCTmKfBvcfvz2j3722ECK589ncDJ3nQklON3C+DdUnTzGdxwFwm0EQ7HdfMrXfnWzcngypNNeQnaDc09iH1nNpCzuOcSkNXsDP4nperd5aa7pS2; x-owpus="3MKe?AhXZJn0wg5VZIU1@bJWE7mhCWrRWw8mg9AB8Tkzp0sD70Vp0fhLjSxy0sXi"; at-owpus=Atza|IwEBIIVbhks-VP2LeyN-GESADF5Y3VE8HxV78-NOSMHJH6BD2qscGPXiSYO0X8pd14X9i7a6XetV1V6o6Cm-8Y5QIDzJOhF6pDQXNdyBCzwqX7cNgDr1GhjiQG95nOy7kPmaOoUM9ScQW-ICuYbaTuh_6vLb6NX7kLL4gtXcR2Grizl8hiJ12iVCmTE8LNJj-GlEWsBrDtJ645yEaktNFyj4h5jewB1kKDVySgaK8QnSIT8DRQ; sess-at-owpus="t4NlmegB7Isca0itj4CEH/MePWE47jZNXAIuYGvImns="; sess-token-owpus=kEMgmCxQNEa2HmCehfARveF9XzAzlcxEIPjvm/4jlqiK8Zw1qCC+AxGDriBxp+j5K8NIDXtRyNcggJPGdJZXyzLmGyaixWP9r5CYQHODV8FBcy3Lh9693HV/HORibmNQRIMG85sRBDfMsUY3xRwnVDvDgS1sRU709Mm+5MGRGg0X/f0TJ/+W4SsaMiXcaIEnbzeix5YaSDcwB9OdMwvMAKC0QLIFpP3pfadNkDoET4p72AeZKFOqXe1W8cI0xQvqvLEhcM7y6cc=; csm-hit=tb:1KRC2S5JTA2660T41QBS+s-7THYCVD4K28M00NGMTSM|1689609956446&t:1689609956446&adb:adblk_no'
             },
             body: JSON.stringify({
@@ -94,8 +94,12 @@ async function getLoads() {
         data = await response.json();
 
 
-        // get csrf token
-        console.log(token)
+        // get csrf token********************************
+
+        //console.log(token)
+        //try
+        let dataKey = sessionStorage.getItem("token");
+        console.log(dataKey)
 
         //let json = JSON.parse(data);
         let json = data;
