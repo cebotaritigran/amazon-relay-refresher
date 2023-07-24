@@ -26,12 +26,6 @@
 // });
 
 
-
-
-
-
-
-
 var requestFilter = { urls: ["https://relay.amazon.com/*"] };
 var extraInfoSpec = ['requestHeaders'];
 let token;
@@ -39,24 +33,25 @@ var handler = function (details) {
   if (details.method = "POST") {
     token = details["requestHeaders"][2]
     token = token["value"]
+
+
+    chrome.storage.local.set({ key: token }).then(() => {
+      console.log("Value is set" + token);
+    });
     console.log(token)
-
-    //try
-    sessionStorage.setItem("token", token);
-
   }
-  console.log(details);
+  console.log(token)
 };
 chrome.webRequest.onBeforeSendHeaders.addListener(handler, requestFilter, extraInfoSpec);
 
 
 //try
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  console.log(message)
-  console.log(sender)
+// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+//   console.log(message)
+//   console.log(sender)
 
-  sendResponse("from service worker")
-})
+//   sendResponse("from service worker")
+// })
 
 // try to send token
 // (async () => {
